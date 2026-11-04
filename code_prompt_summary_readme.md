@@ -1,4 +1,4 @@
-# AI Prompt Engineering Summary — Code Generation
+# Appendix
 
 **Course:** Ecology and Environment (ES1010) — Miyawaki Forest Project  
 **Group ID:** 5_1  
@@ -6,7 +6,7 @@
 
 ---
 
-## 💻 AI Prompt Summary for Code Generation
+## The Logic Behind our promt for code generation:
 
 To generate the Python Monte Carlo uncertainty analysis script, the AI was prompted to write code using `numpy` and `scipy.stats` to execute 1,000 simulation draws per tree based on the generic Chave et al. (2014) equation. The prompt specified modeling inputs with standard normal probability distributions: $\text{DBH} \sim \mathcal{N}(\text{mean}, 0.3)$ to account for circumference measurement errors, $\text{H} \sim \mathcal{N}(\text{mean}, 0.8)$ to capture clinometer/stick height measurement variance, and wood density $\rho \sim \mathcal{N}(\text{mean}, 0.05)$. It instructed the model to calculate statistical outputs including the mean, 2.5th percentile, 50th percentile (median), and 97.5th percentile to establish a 95% confidence interval for each tree and stand total. Additionally, the prompt required generating a single Matplotlib plot with Tree ID on the x-axis, Above-Ground Biomass (kg) on the y-axis, point markers for the mean/median, and error whiskers spanning the 95% interval. Finally, it requested a mandatory caption stating the units and confirming the execution of 1,000 simulation draws to ensure full compliance with the ES1010 Part 3 submission guidelines.
 
