@@ -1,16 +1,16 @@
 # Part 3: Monte Carlo Uncertainty Analysis Summary
 
-## 📊 Methodology & Error Distributions
+##  Methodology & Error Distributions
 
 To quantify uncertainty in generic Chave AGB estimates, a 1,000-draw Monte Carlo simulation per tree was implemented (every stem of all 21 trees perturbed independently; fixed random seed). Uncertainty distributions were specified based on field measurement precision:
 
 * **Diameter at Breast Height ($\text{DBH}$):** Normal distribution $\mathcal{N}(\text{DBH}, \sigma = 0.3\text{ cm})$ reflecting tape alignment error.
 * **Height ($H$):** Normal distribution $\mathcal{N}(H, \sigma = 0.8\text{ m})$ accounting for optical clinometer visual obstruction.
-* **Wood Density ($\rho$):** Uniform distribution $\mathcal{U}(0.9\rho, 1.1\rho)$, i.e., $\pm 10\%$ around the species value in the group sheet, as the sheet holds a single $\rho$ per species [2].
+* **Wood Density ($\rho$):** Uniform distribution $\mathcal{U}(0.9\rho, 1.1\rho)$, i.e., $\pm 10\%$ around the species value in the group sheet, as the sheet holds a single $\rho$ per species .
 
 ---
 
-## 📈 Figure 2 Summary
+##  Figure 2 Summary
 
 > **Figure 2:** Mean Biomass with $95\%$ Confidence Intervals ($2.5\text{th}$ to $97.5\text{th}$ Percentiles) from 1,000 Monte Carlo Draws
 > 
@@ -19,7 +19,7 @@ To quantify uncertainty in generic Chave AGB estimates, a 1,000-draw Monte Carlo
 
 ---
 
-## 🔍 Uncertainty Driver Analysis
+##  Uncertainty Driver Analysis
 
 The smallest trees show the widest $95\%$ intervals (trees `207`, `224`, and `201`: $\pm 131\%$ to $\pm 110\%$ of the mean), because fixed height and diameter errors are large relative to stems only about $2\text{ m}$ tall; the largest trees (`215` and `210`) are tightest ($\pm 30\%$ to $\pm 32\%$). A one-at-a-time variance analysis attributes:
 
@@ -27,7 +27,7 @@ The smallest trees show the widest $95\%$ intervals (trees `207`, `224`, and `20
 * **$\text{DBH}$ Error:** $25\%$ of total variance
 * **Wood Density Error:** $9\%$ of total variance
 
-### 🎯 Key Results & National Offset Propagation
+###  Key Results & National Offset Propagation
 
 * **Total Stand AGB:** $90.4\text{ kg}$ ($95\%$ interval: $79.6\text{–}101.4\text{ kg}$)
 * **Annual Sequestration Rate:** $9,795\text{ to }12,487\text{ kg CO}_2/\text{ha/year}$
